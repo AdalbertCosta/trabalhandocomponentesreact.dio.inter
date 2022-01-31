@@ -14,7 +14,7 @@ const Card = () => {
   }
 
   function Multiplicar(){
-    setValor(valor * 3);
+    setValor(valor * 2);
   }
   
   return (
