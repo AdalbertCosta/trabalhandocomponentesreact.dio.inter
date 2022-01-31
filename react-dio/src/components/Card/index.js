@@ -1,5 +1,5 @@
 import{ useState} from 'react';
-
+import Button from '../Button';
 
 const Card = () => {
 
@@ -13,13 +13,21 @@ const Card = () => {
     setValor(valor - 1);
   }
 
+  function Multiplicar(){
+    setValor(valor * 3);
+  }
+  
   return (
     <div  classeName="card">
       <div classeName="card-header">Meu primeiro card</div>
       <div classeName="card-body">
-        <button type="button" className="btn btn-success" onClick={Adicionar}>Adicionar</button>
-        <button type="button" className="btn btn-danger"  onClick={Remover}>Remover</button>
-        <p>{valor}</p>
+    
+        <Button  className="btn btn-success m-1" onClick={Adicionar}>Adicionar</Button>
+        <Button  className="btn btn-danger m-1"  onClick={Remover}>Remover</Button>
+        <Button  className="btn btn-success m-1" onClick={Multiplicar}>Multiplicar</Button>
+       
+        
+        <span class="border border-5">{valor}</span>
       </div>
     </div>
   )
